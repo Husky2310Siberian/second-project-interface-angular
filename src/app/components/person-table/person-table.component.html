@@ -1,1 +1,33 @@
-<p>person-table works!</p>
+<!-- if there is no person data , show a red label-->
+@if (!person) {
+    <div class="alert alert-danger text-center">NO PERSON DETAILS</div>
+} @else {
+        <table class="table table-bordered w-50">
+
+            <tr>
+                <td class="fw-semibold">Firstname</td>
+                <td class="ps-2">{{person.givenName}}</td>
+            </tr>
+
+            <tr>
+                <td class="fw-semibold">Surname</td>
+                <td class="ps-2">{{person.surName}}</td>
+            </tr>
+
+            <tr>
+                <td class="fw-semibold">Email</td>
+                <td class="ps-2">{{person.email}}</td>
+            </tr>
+
+            <tr>
+                <td class="fw-semibold">Age</td>
+                <td class="ps-2">{{person.age}}</td>
+            </tr>
+
+            <!-- <tr>
+                <td class="fw-semibold">Age</td>
+                <td class="ps-2">{{person?.age}}</td>
+            </tr> -->
+
+        </table>
+    }
